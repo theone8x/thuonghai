@@ -16,7 +16,7 @@ printf '\nVisit https://dashboard.ngrok.com/get-started/setup and Copy the autht
 read -p "Paste authtoken here (Copy and Right-click to paste): " CRP
 printf '\nDownloading NGROK... \n'
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && unzip *.zip
-wget https://raw.githubusercontent.com/ThuongHai/thuonghai/master/ngrok-choice-linux.sh
+wget https://raw.githubusercontent.com/adamzjefri/thuonghai/master/ngrok-choice-linux.sh
 ./ngrok authtoken $CRP
 clear
 chmod +x ngrok-choice-linux.sh
@@ -40,9 +40,3 @@ curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*publ
 echo User: Administrator
 echo Pass: Thuonghai001
 echo Finished! You can Close PUTTY now.
-
-
-
-
-
-
