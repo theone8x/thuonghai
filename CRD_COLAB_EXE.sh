@@ -26,7 +26,15 @@ $endc$enda""";
 
 
 # Used Two if else type statements, one is simple second is complex. So, don't get confused or fear by seeing complex if else statement '^^.
-
+# Initialisation of Installer
+printf "\n\n$c$b    Loading Installer $endc$enda" >&2
+if sudo apt-get update &> /dev/null
+then
+    printf "\r$g$b    Installer Loaded $endc$enda\n" >&2
+else
+    printf "\r$r$b    Error Occured $endc$enda\n" >&2
+    exit
+fi
 
 # Install CrossOver (Run exe on linux)
 
