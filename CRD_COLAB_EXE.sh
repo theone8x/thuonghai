@@ -30,6 +30,7 @@ $endc$enda""";
 
 
 # Install CrossOver (Run exe on linux)
+
 printf "$g$b    Installing CrossOver $endc$enda" >&2
 {
     wget https://media.codeweavers.com/pub/crossover/cxlinux/demo/crossover_20.0.2-1.deb
