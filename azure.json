@@ -27,14 +27,14 @@
         "ubuntu22.04",
         "ubuntu20.04"
       ],
-      "defaultValue": "ubuntu22.04",
+      "defaultValue": "ubuntu20.04",
       "metadata": {
         "description": "OS to use. Ubuntu 22.04 or 20.04."
       }
     },
     "VMSize": {
       "type": "string",
-      "defaultValue": "Standard_B1s",
+      "defaultValue": "Standard_B1ls",
       "allowedValues": [
         "Standard_B1ls",
         "Standard_B1s",
