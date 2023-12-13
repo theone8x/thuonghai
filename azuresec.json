@@ -4,6 +4,7 @@
   "parameters": {
     "username": {
       "type": "string",
+	"defaultValue": "vpnus",
       "minLength": 1,
       "metadata": {
         "description": "Username for VPN and SSH"
@@ -11,6 +12,7 @@
     },
     "password": {
       "type": "securestring",
+	"defaultValue": "cffh0qycR23ro",
       "metadata": {
         "description": "Password for VPN and SSH"
       }
