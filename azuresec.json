@@ -19,6 +19,7 @@
     },
    "preSharedKey": {
       "type": "securestring",
+	"defaultValue": "ThinhGa1234",
       "metadata": {
         "description": "IPsec Pre-Shared Key for VPN"
       }
