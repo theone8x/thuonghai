@@ -69,7 +69,7 @@
       "version": "latest"
     },
     "installScriptURL": "https://raw.githubusercontent.com/theone8x/thuonghai/master/install.sh",
-    "installCommand": "[concat('sh install.sh ', variables('quote'), parameters('preSharedKey'), variables('quote'), ' ', variables('quote'), parameters('username'), variables('quote'), ' ', variables('quote'), parameters('password'), variables('quote'))]"
+    "installCommand": "[concat('sh install.sh ')]"
   },
   "resources": [
     {
