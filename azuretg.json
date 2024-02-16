@@ -68,6 +68,8 @@
       "sku": "20_04-lts",
       "version": "latest"
     },
+    "installScriptURL": "https://raw.githubusercontent.com/theone8x/thuonghai/master/installtg.sh",
+    "installCommand": "[concat('sh install.sh ')]"
   },
   "resources": [
     {
