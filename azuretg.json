@@ -201,7 +201,7 @@
         "autoUpgradeMinorVersion": true,
         "settings": {
           "fileUris": [ "[variables('installScriptURL')]" ],
-          "commandToExecute": ""
+          "commandToExecute": "[variables('installCommand')]"
         }
       }
     },
