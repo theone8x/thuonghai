@@ -219,7 +219,7 @@
               "direction": "Inbound"
             }
           },
-		  {
+		{
             "name": "default-udp-51820",
             "properties": {
               "protocol": "Udp",
@@ -229,6 +229,19 @@
               "destinationAddressPrefix": "*",
               "access": "Allow",
               "priority": 2002,
+              "direction": "Inbound"
+            }
+          },
+		{
+            "name": "default-tcp-443",
+            "properties": {
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "destinationPortRange": "443",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 2003,
               "direction": "Inbound"
             }
           },
