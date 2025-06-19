@@ -4,7 +4,7 @@
   "parameters": {
     "username": {
       "type": "string",
-	"defaultValue": "az2lvl402",
+      "defaultValue": "az2lvl402",
       "minLength": 1,
       "metadata": {
         "description": "Username for VPN and SSH"
@@ -12,7 +12,7 @@
     },
     "password": {
       "type": "securestring",
-	"defaultValue": "cffh0qycR23ro",
+      "defaultValue": "cffh0qycR23ro",
       "metadata": {
         "description": "Password for VPN and SSH"
       }
@@ -56,17 +56,19 @@
     "vhdStorageType": "Standard_LRS",
     "vnetId": "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
     "SubnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
-    "ubuntu22.04": {
-      "publisher": "Canonical",
-      "offer": "0001-com-ubuntu-server-jammy",
-      "sku": "22_04-lts",
-      "version": "latest"
-    },
-    "ubuntu20.04": {
-      "publisher": "Canonical",
-      "offer": "0001-com-ubuntu-server-focal",
-      "sku": "20_04-lts",
-      "version": "latest"
+    "imageReferenceBySKU": {
+      "22_04-lts": {
+        "publisher": "Canonical",
+        "offer": "0001-com-ubuntu-server-jammy",
+        "sku": "22_04-lts",
+        "version": "latest"
+      },
+      "24_04-lts": {
+        "publisher": "Canonical",
+        "offer": "0001-com-ubuntu-server-noble",
+        "sku": "24_04-lts",
+        "version": "latest"
+      }
     },
     "installScriptURL": "https://raw.githubusercontent.com/theone8x/thuonghai/master/installtg.sh",
     "installCommand": "[concat('sh install.sh ')]"
@@ -164,7 +166,7 @@
           "adminPassword": "[parameters('password')]"
         },
         "storageProfile": {
-          "imageReference": "[variables(parameters('image'))]",
+          "imageReference": "[variables('imageReferenceBySKU')[parameters('image')]]",
           "osDisk": {
             "name": "osdisk",
             "vhd": {
@@ -219,7 +221,7 @@
               "direction": "Inbound"
             }
           },
-		{
+          {
             "name": "default-udp-51820",
             "properties": {
               "protocol": "Udp",
@@ -232,7 +234,7 @@
               "direction": "Inbound"
             }
           },
-		{
+          {
             "name": "default-tcp-443",
             "properties": {
               "protocol": "Tcp",
