@@ -20,10 +20,10 @@
     "image": {
       "type": "string",
       "allowedValues": [
-        "Ubuntu Server 24.04 LTS - x64 Gen2",
-        "Ubuntu Server 22.04 LTS - x64 Gen2"
+        "22_04-lts",
+        "24_04-lts"
       ],
-      "defaultValue": "Ubuntu Server 24.04 LTS - x64 Gen2",
+      "defaultValue": "22_04-lts",
       "metadata": {
         "description": "OS to use. Ubuntu 24.04 or 22.04."
       }
